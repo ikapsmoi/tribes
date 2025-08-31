@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build",
-    "dev": "cd web && npm run dev",
-    "start": "cd web && npm start",
+    "build": "next build && next export",
+  "dev": "next dev",
+  "start": "next start",
     "typecheck": "react-router typegen && tsc --noEmit"
   },
   "dependencies": {
