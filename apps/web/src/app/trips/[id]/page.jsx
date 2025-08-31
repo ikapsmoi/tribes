@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { 
   ArrowLeft, MapPin, Calendar, Users, Star, Heart, Share2, 
