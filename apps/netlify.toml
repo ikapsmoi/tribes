@@ -1,0 +1,32 @@
+[build]
+  # Build command for monorepo structure
+  command = "cd web && npm install && npm run build"
+  
+  # Publish directory (Next.js static export)
+  publish = "web/out"
+  
+  # Node.js version
+  NODE_VERSION = "18"
+
+# API functions directory
+[functions]
+  directory = "netlify/functions"
+
+# Redirect all API calls to serverless functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
