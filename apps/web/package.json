@@ -1,7 +1,6 @@
 {
   "name": "web",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "next build && next export",
   "dev": "next dev",
