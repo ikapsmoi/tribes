@@ -3,7 +3,8 @@
  * not attempt to edit it. Do not import @auth/create or @auth/create
  * anywhere else or it may break. This is an internal package.
  */
-import CreateAuth from "@auth/create"
+import { createAuth } from "@auth/core"
+
 import Credentials from "@auth/core/providers/credentials"
 import Google from "@auth/core/providers/google"
 import Facebook from "@auth/core/providers/facebook"

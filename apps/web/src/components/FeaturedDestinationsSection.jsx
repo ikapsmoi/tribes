@@ -1,3 +1,5 @@
+"use client";
+
 import { MapPin, Clock, Users } from "lucide-react";
 
 export default function FeaturedDestinationsSection() {
